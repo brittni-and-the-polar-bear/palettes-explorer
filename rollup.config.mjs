@@ -35,7 +35,7 @@ export default {
     output: {
         dir: './out/dist',
         format: 'es',
-        name: 'GenerativeArtTemplate',
+        name: 'GenArtExplorer_Palettes',
         sourcemap: true,
         preserveModules: true
     },
@@ -55,7 +55,7 @@ export default {
             output: 'bundle.css'
         }),
         html({
-            title: 'Generative Art Template',
+            title: 'GenArt Explorer - Palettes',
             publicPath: './'
         }),
         dev && serve({
