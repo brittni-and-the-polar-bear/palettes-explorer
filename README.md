@@ -1,4 +1,4 @@
-# generative art explorer - palettes
+# @batpb/genart explorer - palettes
 
 Copyright (C) 2024 brittni and the polar bear LLC.
 
@@ -15,7 +15,7 @@ library
 ### actions
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-explorer_palettes/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-explorer_palettes/actions/workflows/codeql.yml)
-[![Node.js Build](https://github.com/brittni-and-the-polar-bear/generative-art-explorer_palettes/actions/workflows/node-build.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-explorer_palettes/actions/workflows/node-build.yml)
+[![Node.js Build](https://github.com/brittni-and-the-polar-bear/generative-art-explorer_palettes/actions/workflows/node-js.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-explorer_palettes/actions/workflows/node-js.yml)
 
 ----
 
