@@ -1,12 +1,12 @@
 {
   "name": "generative-art-explorer_palettes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "An exploration and testing project for the palettes of the @batpb/genart library",
-  "main": "./out/dist/src/sketch.js",
+  "private": true,
   "scripts": {
     "lint": "eslint ./src",
-    "build": "rm -r ./out; rollup --config",
-    "start": "rm -r ./out; rollup --config --watch"
+    "build": "echo \"script 'build' not defined\" && exit 1",
+    "dev": "echo \"script 'dev' not defined\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -45,29 +45,23 @@
     "p5": "^1.11.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.14.0",
-    "@rollup/plugin-commonjs": "^28.0.1",
-    "@rollup/plugin-html": "^1.0.4",
-    "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^15.3.0",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^12.1.1",
-    "@stylistic/eslint-plugin": "^2.10.1",
+    "@eslint/js": "^9.13.0",
+    "@stylistic/eslint-plugin": "^2.9.0",
     "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "^8.13.0",
-    "@typescript-eslint/parser": "^8.13.0",
-    "eslint": "^9.14.0",
-    "eslint-plugin-es-x": "^8.1.0",
-    "eslint-plugin-n": "^17.13.1",
+    "@typescript-eslint/eslint-plugin": "^8.11.0",
+    "@typescript-eslint/parser": "^8.11.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.13.0",
+    "eslint-plugin-es-x": "^8.0.0",
+    "eslint-plugin-n": "^17.11.1",
     "eslint-plugin-security": "^3.0.1",
-    "rollup": "^4.25.0",
-    "rollup-plugin-analyzer": "^4.0.0",
-    "rollup-plugin-css-only": "^4.5.2",
-    "rollup-plugin-serve": "^1.1.1",
-    "size-limit": "^11.1.6",
-    "ts-node": "^10.9.2",
-    "tslib": "^2.8.1",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.1",
+    "ts-loader": "^9.5.1",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.13.0"
+    "typescript-eslint": "^8.11.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
