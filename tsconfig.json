@@ -6,14 +6,7 @@
     /* Modules */
     "module": "es6",
     "moduleResolution": "node",
-    "rootDirs": [
-      "./src"
-    ],
-
-    /* JSON Modules */
-    "resolveJsonModule": true,
-    "resolvePackageJsonExports": false,
-    "resolvePackageJsonImports": false,
+    "rootDir": "./src",
 
     /* Emit */
     "outDir": "./out/dist",
@@ -22,7 +15,6 @@
     "declarationMap": false,
     "removeComments": true,
     "noEmitOnError": true,
-    "preserveConstEnums": true,
 
     /* Interop Constraints */
     "isolatedModules": true,
@@ -31,12 +23,23 @@
 
     /* Type Checking */
     "strict": true,
-    "noImplicitAny": true,
+    "alwaysStrict": true,
     "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+
+    "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitOverride": true,
+    "noImplicitThis": true,
+
+    "allowUnusedLabels": false,
     "allowUnreachableCode": false
   }
 }
