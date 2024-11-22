@@ -1,6 +1,6 @@
 {
-  "name": "generative-art-explorer_palettes",
-  "version": "1.0.0",
+  "name": "palettes-explorer",
+  "version": "1.0.0-rc1",
   "description": "An exploration and testing project for the palettes of the @batpb/genart library",
   "private": true,
   "scripts": {
