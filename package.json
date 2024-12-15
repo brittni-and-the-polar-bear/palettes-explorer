@@ -1,24 +1,33 @@
 {
-  "name": "generative-art-explorer_palettes",
-  "version": "1.0.0",
+  "name": "palettes-explorer",
+  "version": "1.0.0-rc.1",
   "description": "An exploration and testing project for the palettes of the @batpb/genart library",
   "private": true,
   "scripts": {
-    "lint": "eslint ./src",
-    "build": "echo \"script 'build' not defined\" && exit 1",
-    "dev": "echo \"script 'dev' not defined\" && exit 1"
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development",
+    "lint:js": "eslint -c eslint.config.js.mjs eslint.config.ts.mjs eslint.config.js.mjs webpack.config.js",
+    "lint:ts": "eslint -c eslint.config.ts.mjs ./src",
+    "stats": "webpack --mode development --profile --json > ./out/stats.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brittni-and-the-polar-bear/generative-art-explorer_palettes.git"
+    "url": "git+https://github.com/brittni-and-the-polar-bear/palettes-explorer.git"
   },
   "keywords": [
+    "algorithmic art",
     "code art",
     "generative art",
     "p5",
     "p5.js",
     "p5js",
-    "typescript"
+    "p5-js",
+    "typescript",
+    "testing",
+    "colors",
+    "palettes"
   ],
   "author": {
     "name": "brittni and the polar bear",
@@ -36,32 +45,30 @@
   ],
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/brittni-and-the-polar-bear/generative-art-explorer_palettes/issues"
+    "url": "https://github.com/brittni-and-the-polar-bear/palettes-explorer/issues"
   },
-  "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-explorer_palettes#readme",
+  "homepage": "https://github.com/brittni-and-the-polar-bear/palettes-explorer#readme",
   "dependencies": {
-    "@batpb/genart": "^1.1.0",
-    "@types/p5": "^1.7.6",
-    "p5": "^1.11.1"
+    "@batpb/genart": "^2.0.0-rc2",
+    "p5": "^1.11.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "@stylistic/eslint-plugin": "^2.9.0",
+    "@eslint/js": "^9.17.0",
+    "@stylistic/eslint-plugin": "^2.12.1",
     "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "^8.11.0",
-    "@typescript-eslint/parser": "^8.11.0",
+    "@types/p5": "^1.7.6",
     "css-loader": "^7.1.2",
-    "eslint": "^9.13.0",
-    "eslint-plugin-es-x": "^8.0.0",
-    "eslint-plugin-n": "^17.11.1",
+    "eslint": "^9.17.0",
+    "eslint-plugin-es-x": "^8.4.1",
+    "eslint-plugin-n": "^17.15.0",
     "eslint-plugin-security": "^3.0.1",
     "html-webpack-plugin": "^5.6.3",
-    "mini-css-extract-plugin": "^2.9.1",
+    "mini-css-extract-plugin": "^2.9.2",
     "ts-loader": "^9.5.1",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.11.0",
-    "webpack": "^5.95.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "webpack": "^5.97.1",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "webpack-dev-server": "^5.2.0"
   }
 }
