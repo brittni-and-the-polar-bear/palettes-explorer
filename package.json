@@ -1,6 +1,6 @@
 {
   "name": "palettes-explorer",
-  "version": "1.0.0-rc.1",
+  "version": "0.1.0-rc.1",
   "description": "An exploration and testing project for the palettes of the @batpb/genart library",
   "private": true,
   "scripts": {
