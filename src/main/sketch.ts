@@ -21,4 +21,60 @@
  * for full license details.
  */
 
-console.log('Hello, world!');
+import P5Lib from 'p5';
+import {RGBConfig, RGBScreen} from "./rgb-screen";
+import {
+    ASPECT_RATIOS,
+    AspectRatio,
+    Canvas, CanvasScreenConfig,
+    GraphicsContext, BlueColorSelector,
+    P5Context,
+    ScreenConfigBuilder
+} from "@batpb/genart";
+
+import '../../assets/styles/sketch.css';
+
+const p5: P5Lib = P5Context.p5;
+
+p5.setup = (): void => {
+    Canvas.buildCanvas(ASPECT_RATIOS.SQUARE, 720, p5.P2D, 'sketch-canvas', false, true);
+
+    const screen: RGBScreen = new RGBScreen(buildRGBScreen());
+    Canvas.addScreen(screen);
+    Canvas.currentScreen = screen.NAME;
+};
+
+p5.draw = (): void => {
+    Canvas.draw();
+};
+
+p5.windowResized = (): void => {
+    Canvas.resize();
+};
+
+p5.keyPressed = (): void => {
+    Canvas.keyPressed();
+};
+
+function buildRGBScreen(): RGBConfig {
+    const builder: ScreenConfigBuilder = new ScreenConfigBuilder();
+    builder.setName('sketch-screen')
+        .setActiveGraphics({
+            NAME: 'sketch-graphics',
+            ASPECT_RATIO: new AspectRatio(ASPECT_RATIOS.SQUARE),
+            RESOLUTION: 720
+        });
+
+    let config: CanvasScreenConfig | undefined = builder.build();
+
+    if (!config) {
+        config = {
+            NAME: 'default-screen',
+            ACTIVE_GRAPHICS: new GraphicsContext({NAME: 'default-graphics'})
+        }
+    }
+
+    (config as RGBConfig).COLOR_SELECTOR = new BlueColorSelector();
+
+    return (config as RGBConfig);
+}
