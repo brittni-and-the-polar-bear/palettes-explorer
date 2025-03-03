@@ -1,6 +1,6 @@
 # @batpb/genart explorer - palettes
 
-Copyright (C) 2024 brittni and the polar bear LLC.
+Copyright (C) 2024-2025 brittni and the polar bear LLC.
 
 An exploration and testing project for the palettes of the
 [@batpb/genart](https://www.npmjs.com/package/@batpb/genart)
