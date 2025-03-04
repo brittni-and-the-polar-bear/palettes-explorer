@@ -29,12 +29,22 @@ import {
     Canvas, CanvasScreenConfig,
     GraphicsContext, BlueColorSelector,
     P5Context,
-    ScreenConfigBuilder
+    ScreenConfigBuilder,
+    RedColorSelector, GreenColorSelector, CyanColorSelector, MagentaColorSelector, RGBColorSelector
 } from "@batpb/genart";
 
 import '../../assets/styles/sketch.css';
 
 const p5: P5Lib = P5Context.p5;
+
+const selectors: RGBColorSelector[] = [
+    new RedColorSelector(),
+    new GreenColorSelector(),
+    new BlueColorSelector(),
+    new CyanColorSelector(),
+    new MagentaColorSelector(),
+    // new YellowColorSelector()
+];
 
 p5.setup = (): void => {
     Canvas.buildCanvas(ASPECT_RATIOS.SQUARE, 720, p5.P2D, 'sketch-canvas', false, true);
@@ -74,7 +84,7 @@ function buildRGBScreen(): RGBConfig {
         }
     }
 
-    (config as RGBConfig).COLOR_SELECTOR = new BlueColorSelector();
+    (config as RGBConfig).COLOR_SELECTOR = selectors[4];
 
     return (config as RGBConfig);
 }

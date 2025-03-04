@@ -50,7 +50,7 @@ export class RGBScreen extends CanvasScreen {
             const x: number = Random.randomFloat(this.minX, this.maxX);
             const y: number = Random.randomFloat(this.minY, this.maxY);
             const color: Color = config.COLOR_SELECTOR.getColor();
-            color.alpha = 150;
+            color.alpha = Random.randomInt(85, 175);
             this.#positions.push(new Coordinate(x, y, config.ACTIVE_GRAPHICS));
             this.#colors.push(color);
         }
